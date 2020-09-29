@@ -1,0 +1,55 @@
+simplicity:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Position Controllers --------------------------------------
+  Rev14_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Rev14
+    pid: {p: 100.0, i: 1, d: 0.1}
+  Rev15_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Rev15
+    pid: {p: 100.0, i: 1, d: 0.1}
+  Rev16_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Rev16
+    pid: {p: 100.0, i: 1, d: 0.1}
+  Rev17_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Rev17
+    pid: {p: 100.0, i: 1, d: 0.1}
+  Rev18_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Rev18
+    pid: {p: 100.0, i: 1, d: 0.1}
+  Rev19_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Rev19
+    pid: {p: 100.0, i: 1, d: 0.1}
+  Rev20_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Rev20
+    pid: {p: 100.0, i: 1, d: 0.1}
+  Rev21_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Rev21
+    pid: {p: 100.0, i: 1, d: 0.1}
+  Rev35_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Rev35
+    pid: {p: 100.0, i: 1, d: 0.1}
+  Rev36_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Rev36
+    pid: {p: 100.0, i: 1, d: 0.1}
+  Rev37_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Rev37
+    pid: {p: 100.0, i: 1, d: 0.1}
+  Rev38_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Rev38
+    pid: {p: 100.0, i: 1, d: 0.1}
