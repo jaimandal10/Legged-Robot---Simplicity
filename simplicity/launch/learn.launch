@@ -1,0 +1,8 @@
+<launch>
+
+    <!-- Load the parameters for the algorithm -->
+    <rosparam command="load" file="$(find simplicity_description)/config/rl_params.yaml" />
+
+    <!-- Launch the training system -->
+    <node pkg="simplicity_description" name="monoped_gym" type="training.py" output="screen"/>
+</launch>

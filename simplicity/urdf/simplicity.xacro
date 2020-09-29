@@ -1,0 +1,1255 @@
+<?xml version="1.0" ?>
+<robot name="simplicity" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find simplicity_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find simplicity_description)/urdf/simplicity.trans" />
+<xacro:include filename="$(find simplicity_description)/urdf/simplicity.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="4.112035898902128e-16 -0.0048792588010025915 0.008837933311495879"/>
+    <mass value="6.620487558792786"/>
+    <inertia ixx="0.085233" ixy="0.0" ixz="-0.0" iyy="0.01677" iyz="-4.9e-05" izz="0.093157"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="flap_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.014000000000002828 -0.03516115626697258 2.498001805406602e-16"/>
+    <mass value="1.1477327119549225"/>
+    <inertia ixx="0.000487" ixy="-0.0" ixz="-0.0" iyy="0.0019" iyz="0.0" izz="0.002344"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.014 0.145 -0.07"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/flap_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.014 0.145 -0.07"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/flap_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="shoulder_link_ft_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.017499997312540948 -0.006654145164107783 -0.009325483569031609"/>
+    <mass value="0.10866931320767136"/>
+    <inertia ixx="6e-06" ixy="0.0" ixz="-0.0" iyy="4.7e-05" iyz="-1e-06" izz="4.4e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0175 0.185 -0.044195"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/shoulder_link_ft_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0175 0.185 -0.044195"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/shoulder_link_ft_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="shoulder_link_fb_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.017499997312540903 -0.006654145164107644 0.00932570682031407"/>
+    <mass value="0.10866931320767136"/>
+    <inertia ixx="6e-06" ixy="-0.0" ixz="-0.0" iyy="4.7e-05" iyz="1e-06" izz="4.4e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.0175 0.185 0.032226"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/shoulder_link_fb_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.0175 0.185 0.032226"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/shoulder_link_fb_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="shoulder_link_bt_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.01749999731254086 0.006654145164107728 -0.009325483569031685"/>
+    <mass value="0.10866931320767136"/>
+    <inertia ixx="6e-06" ixy="0.0" ixz="0.0" iyy="4.7e-05" iyz="1e-06" izz="4.4e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.0175 -0.175 -0.044195"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/shoulder_link_bt_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.0175 -0.175 -0.044195"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/shoulder_link_bt_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="shoulder_link_bb_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.01750000268745918 0.006654145164107728 0.009325706820313927"/>
+    <mass value="0.10866931320767136"/>
+    <inertia ixx="6e-06" ixy="-0.0" ixz="0.0" iyy="4.7e-05" iyz="-1e-06" izz="4.4e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.0175 -0.175 0.032226"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/shoulder_link_bb_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.0175 -0.175 0.032226"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/shoulder_link_bb_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_shoulder_fr_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.005000000000002336 0.00543241821151455 0.025443770697721274"/>
+    <mass value="0.12611294901526873"/>
+    <inertia ixx="4.3e-05" ixy="-0.0" ixz="-0.0" iyy="2.4e-05" iyz="0.0" izz="2.7e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.015 0.2 0.018905"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/servo_shoulder_fr_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.015 0.2 0.018905"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/servo_shoulder_fr_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_shoulder_fl_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0049999999999970485 0.005432418211514745 -0.024335644246294287"/>
+    <mass value="0.12611294901526873"/>
+    <inertia ixx="4.3e-05" ixy="-0.0" ixz="-0.0" iyy="2.4e-05" iyz="0.0" izz="2.7e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.015 0.2 -0.030874"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/servo_shoulder_fl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.015 0.2 -0.030874"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/servo_shoulder_fl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_shoulder_br_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.00500000000000243 -0.00543241821151455 -0.02433564424629428"/>
+    <mass value="0.12611294901526873"/>
+    <inertia ixx="4.3e-05" ixy="-0.0" ixz="0.0" iyy="2.4e-05" iyz="-0.0" izz="2.7e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.025 -0.19 -0.030874"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/servo_shoulder_br_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.025 -0.19 -0.030874"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/servo_shoulder_br_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_shoulder_bl_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.005000350405373357 -0.005432418211514467 -0.02433592840843149"/>
+    <mass value="0.12611294901526873"/>
+    <inertia ixx="4.3e-05" ixy="-0.0" ixz="0.0" iyy="2.4e-05" iyz="-0.0" izz="2.7e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.015 -0.19 -0.030893"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/servo_shoulder_bl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.015 -0.19 -0.030893"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/servo_shoulder_bl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_back_fl_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="1.7562160059547693e-11 0.0008661095082098391 0.0007024205530737973"/>
+    <mass value="0.02281063258866873"/>
+    <inertia ixx="4e-06" ixy="-0.0" ixz="0.0" iyy="5e-06" iyz="-0.0" izz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.02 0.1731 -0.005984"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/servo_back_fl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.02 0.1731 -0.005984"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/servo_back_fl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_back_fr_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="1.7564595611307965e-11 0.0008661095082097281 0.0007018354970893589"/>
+    <mass value="0.02281063258866873"/>
+    <inertia ixx="4e-06" ixy="-0.0" ixz="0.0" iyy="5e-06" iyz="-0.0" izz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.02 0.1731 -0.005985"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/servo_back_fr_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.02 0.1731 -0.005985"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/servo_back_fr_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_back_br_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-1.756455050849759e-11 -0.0008661095082097281 0.0007024205530738103"/>
+    <mass value="0.02281063258866873"/>
+    <inertia ixx="4e-06" ixy="-0.0" ixz="-0.0" iyy="5e-06" iyz="0.0" izz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.02 -0.1631 -0.005984"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/servo_back_br_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.02 -0.1631 -0.005984"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/servo_back_br_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_back_bl_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="3.503878068279731e-07 -0.0008661095082098114 0.0007021363909365938"/>
+    <mass value="0.02281063258866873"/>
+    <inertia ixx="4e-06" ixy="-0.0" ixz="-0.0" iyy="5e-06" iyz="0.0" izz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.02 -0.1631 -0.006003"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/servo_back_bl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.02 -0.1631 -0.006003"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/servo_back_bl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="shoulder_thigh_fr_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.03536836247769268 0.01856774724193691 -1.8091769650105394e-07"/>
+    <mass value="0.1304736517617523"/>
+    <inertia ixx="7.1e-05" ixy="7e-06" ixz="-0.0" iyy="5.6e-05" iyz="0.0" izz="0.000123"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.02 0.2175 -0.016285"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/shoulder_thigh_fr_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.02 0.2175 -0.016285"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/shoulder_thigh_fr_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="shoulder_thigh_fl_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.03536836247769255 0.018567747241940047 4.0416897906930815e-07"/>
+    <mass value="0.1304736517617523"/>
+    <inertia ixx="7.1e-05" ixy="-7e-06" ixz="-0.0" iyy="5.6e-05" iyz="-0.0" izz="0.000123"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.02 0.2175 -0.016284"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/shoulder_thigh_fl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.02 0.2175 -0.016284"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/shoulder_thigh_fl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="shoulder_thigh_bl_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0353687128830632 -0.018567747241936827 1.1997615072603662e-07"/>
+    <mass value="0.1304736517617523"/>
+    <inertia ixx="7.1e-05" ixy="7e-06" ixz="0.0" iyy="5.6e-05" iyz="-0.0" izz="0.000123"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.02 -0.2075 -0.016303"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/shoulder_thigh_bl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.02 -0.2075 -0.016303"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/shoulder_thigh_bl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="shoulder_thigh_br_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.03536836247769273 -0.018567747241936827 4.041689790727776e-07"/>
+    <mass value="0.1304736517617523"/>
+    <inertia ixx="7.1e-05" ixy="-7e-06" ixz="0.0" iyy="5.6e-05" iyz="0.0" izz="0.000123"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.02 -0.2075 -0.016284"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/shoulder_thigh_br_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.02 -0.2075 -0.016284"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/shoulder_thigh_br_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_thigh_fl_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.022932418584043157 -0.006891496913355971 0.006891901066993125"/>
+    <mass value="0.12611294901526873"/>
+    <inertia ixx="2.4e-05" ixy="0.0" ixz="-0.0" iyy="3.5e-05" iyz="8e-06" izz="3.5e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.07975 0.19495 -0.016284"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/servo_thigh_fl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.07975 0.19495 -0.016284"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/servo_thigh_fl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo-thigh_fr_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.022932418584043657 -0.006891496913359663 0.0068913160110097085"/>
+    <mass value="0.12611294901526873"/>
+    <inertia ixx="2.4e-05" ixy="-0.0" ixz="0.0" iyy="3.5e-05" iyz="8e-06" izz="3.5e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.07975 0.19495 -0.016285"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/servo-thigh_fr_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.07975 0.19495 -0.016285"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/servo-thigh_fr_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_thigh_br_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.0229324185840437 -0.006891496913359246 0.006891901066994537"/>
+    <mass value="0.12611294901526873"/>
+    <inertia ixx="2.4e-05" ixy="-0.0" ixz="0.0" iyy="3.5e-05" iyz="8e-06" izz="3.5e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.07975 -0.18495 -0.016284"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/servo_thigh_br_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.07975 -0.18495 -0.016284"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/servo_thigh_br_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_thigh_bl_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.02293276898941332 -0.0068914969133627435 0.006891616904855773"/>
+    <mass value="0.12611294901526873"/>
+    <inertia ixx="2.4e-05" ixy="0.0" ixz="-0.0" iyy="3.5e-05" iyz="8e-06" izz="3.5e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.07975 -0.18495 -0.016303"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/servo_thigh_bl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.07975 -0.18495 -0.016303"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/servo_thigh_bl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="thigh_fl_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.010000000372525186 0.020948873011734453 -0.02801994489132628"/>
+    <mass value="0.6807246295804776"/>
+    <inertia ixx="0.000888" ixy="0.0" ixz="-0.0" iyy="0.000466" iyz="0.000325" izz="0.000466"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.09725 0.181098 -0.009504"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/thigh_fl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.09725 0.181098 -0.009504"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/thigh_fl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="thigh_fr_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.010000000372527476 0.02801987301172676 -0.020948529947312708"/>
+    <mass value="0.6807246295804776"/>
+    <inertia ixx="0.000888" ixy="0.0" ixz="0.0" iyy="0.000466" iyz="0.000325" izz="0.000466"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.09725 0.188169 -0.002433"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/thigh_fr_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.09725 0.188169 -0.002433"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/thigh_fr_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="thigh_br_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.010000000372523923 0.0280193490449602 -0.020948468858096723"/>
+    <mass value="0.6807246295804776"/>
+    <inertia ixx="0.000888" ixy="-0.0" ixz="0.0" iyy="0.000466" iyz="0.000325" izz="0.000466"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.09725 -0.191731 -0.002432"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/thigh_br_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.09725 -0.191731 -0.002432"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/thigh_br_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="thigh_bl_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.010000350777899278 0.020949238093116884 -0.028019594134853144"/>
+    <mass value="0.6807246295804776"/>
+    <inertia ixx="0.000888" ixy="-0.0" ixz="0.0" iyy="0.000466" iyz="0.000325" izz="0.000466"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.09725 -0.197246 -0.011078"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/thigh_bl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.09725 -0.197246 -0.011078"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/thigh_bl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_leg_fl_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.005432417838992815 0.020743718970054364 -0.013672314816416058"/>
+    <mass value="0.12611294901526873"/>
+    <inertia ixx="2.4e-05" ixy="0.0" ixz="-0.0" iyy="3.5e-05" iyz="8e-06" izz="3.5e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.11725 0.139201 0.046536"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/servo_leg_fl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.11725 0.139201 0.046536"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/servo_leg_fl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_leg_fr_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.005432417838988707 0.020743718970049063 -0.013671899872399342"/>
+    <mass value="0.12611294901526873"/>
+    <inertia ixx="2.4e-05" ixy="-0.0" ixz="0.0" iyy="3.5e-05" iyz="8e-06" izz="3.5e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.11725 0.139201 0.046536"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/servo_leg_fr_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.11725 0.139201 0.046536"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/servo_leg_fr_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_leg_br_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.005432417838997436 0.020743718970050062 -0.013672314816417008"/>
+    <mass value="0.12611294901526873"/>
+    <inertia ixx="2.4e-05" ixy="-0.0" ixz="0.0" iyy="3.5e-05" iyz="8e-06" izz="3.5e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.11725 -0.240699 0.046536"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/servo_leg_br_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.11725 -0.240699 0.046536"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/servo_leg_br_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_leg_bl_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.005432067433614532 0.020743084051436572 -0.0136719640599429"/>
+    <mass value="0.12611294901526873"/>
+    <inertia ixx="2.4e-05" ixy="0.0" ixz="-0.0" iyy="3.5e-05" iyz="8e-06" izz="3.5e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.11725 -0.239144 0.044962"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/servo_leg_bl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.11725 -0.239144 0.044962"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/servo_leg_bl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_leg_back_fr_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0008661091356842454 -0.0004959786660630322 0.0004967977388669886"/>
+    <mass value="0.02281063258866873"/>
+    <inertia ixx="5e-06" ixy="0.0" ixz="-0.0" iyy="3e-06" iyz="1e-06" izz="3e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.09035 0.118066 0.0606"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/servo_leg_back_fr_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.09035 0.118066 0.0606"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/servo_leg_back_fr_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_leg_back_fl_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.0008661091356878814 -0.0004959786412139094 0.0004963828196939898"/>
+    <mass value="0.02281063258866873"/>
+    <inertia ixx="5e-06" ixy="-0.0" ixz="0.0" iyy="3e-06" iyz="1e-06" izz="3e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.09035 0.118066 0.0606"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/servo_leg_back_fl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.09035 0.118066 0.0606"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/servo_leg_back_fl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_leg_back_br_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0008661091356926692 -0.000495978666059993 0.0004963827948533533"/>
+    <mass value="0.02281063258866873"/>
+    <inertia ixx="5e-06" ixy="0.0" ixz="-0.0" iyy="3e-06" iyz="1e-06" izz="3e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.09035 -0.261834 0.0606"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/servo_leg_back_br_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.09035 -0.261834 0.0606"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/servo_leg_back_br_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_leg_back_bl_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.0008657587303095154 -0.0004966135598298838 0.0004967335761668704"/>
+    <mass value="0.02281063258866873"/>
+    <inertia ixx="5e-06" ixy="-0.0" ixz="0.0" iyy="3e-06" iyz="1e-06" izz="3e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.09035 -0.260279 0.059026"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/servo_leg_back_bl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.09035 -0.260279 0.059026"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/servo_leg_back_bl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="thigh_leg_fl_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.018184688190121992 -0.01621811687116803 -0.028090805116575066"/>
+    <mass value="0.1156470817084515"/>
+    <inertia ixx="4.7e-05" ixy="-3e-06" ixz="-5e-06" iyy="9.9e-05" iyz="-1.9e-05" izz="7.7e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.13475 0.125349 0.053317"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/thigh_leg_fl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.13475 0.125349 0.053317"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/thigh_leg_fl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="thigh_leg_fr_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0181846881901178 -0.016218117023675704 -0.028091390084516582"/>
+    <mass value="0.1156470817084515"/>
+    <inertia ixx="4.7e-05" ixy="3e-06" ixz="5e-06" iyy="9.9e-05" iyz="-1.9e-05" izz="7.7e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.13475 0.125349 0.053316"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/thigh_leg_fr_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.13475 0.125349 0.053316"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/thigh_leg_fr_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="thigh_leg_bl_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.018184337784745666 -0.016218751789786323 -0.028091454360102096"/>
+    <mass value="0.1156470817084515"/>
+    <inertia ixx="4.7e-05" ixy="-3e-06" ixz="-5e-06" iyy="9.9e-05" iyz="-1.9e-05" izz="7.7e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.13475 -0.252996 0.051742"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/thigh_leg_bl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.13475 -0.252996 0.051742"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/thigh_leg_bl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="thigh_leg_br_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.018184688190132442 -0.016218117023675288 -0.02809080502853495"/>
+    <mass value="0.1156470817084515"/>
+    <inertia ixx="4.7e-05" ixy="3e-06" ixz="5e-06" iyy="9.9e-05" iyz="-1.9e-05" izz="7.7e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.13475 -0.254551 0.053317"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/thigh_leg_br_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.13475 -0.254551 0.053317"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/thigh_leg_br_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="contact_sensor_fl_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.010014114249511152 -0.031982263702663605 -0.07328498317579081"/>
+    <mass value="0.02331328987325343"/>
+    <inertia ixx="1e-06" ixy="0.0" ixz="-0.0" iyy="1e-06" iyz="-0.0" izz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.122043 0.153817 0.102672"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/contact_sensor_fl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.122043 0.153817 0.102672"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/contact_sensor_fl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="contact_sensor_fr_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.010014114994570639 -0.03198226370267268 -0.07328456823177738"/>
+    <mass value="0.023313289873253422"/>
+    <inertia ixx="1e-06" ixy="0.0" ixz="-0.0" iyy="1e-06" iyz="-0.0" izz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.102357 0.153817 0.102672"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/contact_sensor_fr_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.102357 0.153817 0.102672"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/contact_sensor_fr_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="contact_sensor_bl_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.010013763844137685 -0.03198189862128145 -0.0732846324193179"/>
+    <mass value="0.023313289873253474"/>
+    <inertia ixx="1e-06" ixy="0.0" ixz="-0.0" iyy="1e-06" iyz="-0.0" izz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.122043 -0.224527 0.101098"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/contact_sensor_bl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.122043 -0.224527 0.101098"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/contact_sensor_bl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="contact_sensor_br_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.010014127446017373 -0.03198235684267073 -0.07328492487984382"/>
+    <mass value="0.02331358403500205"/>
+    <inertia ixx="1e-06" ixy="0.0" ixz="-0.0" iyy="1e-06" iyz="-0.0" izz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.102357 -0.226083 0.102672"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/contact_sensor_br_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.102357 -0.226083 0.102672"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/contact_sensor_br_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_fl_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0001058905962506157 0.019028085856196253 0.03963311078041559"/>
+    <mass value="0.14550955662938456"/>
+    <inertia ixx="7.7e-05" ixy="-0.0" ixz="0.0" iyy="7.3e-05" iyz="-2.9e-05" izz="2.7e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.111982 0.187094 0.170967"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/leg_fl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.111982 0.187094 0.170967"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/leg_fl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_fr_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.00010588985118935301 0.01902808585618737 0.03963352572442902"/>
+    <mass value="0.14550955662938456"/>
+    <inertia ixx="7.7e-05" ixy="-0.0" ixz="0.0" iyy="7.3e-05" iyz="-2.9e-05" izz="2.7e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.112418 0.187094 0.170967"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/leg_fr_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.112418 0.187094 0.170967"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/leg_fr_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_bl_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.00010524100162287442 0.01902845093757835 0.039633461536888515"/>
+    <mass value="0.14550955662938456"/>
+    <inertia ixx="7.7e-05" ixy="-0.0" ixz="0.0" iyy="7.3e-05" iyz="-2.9e-05" izz="2.7e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.111983 -0.19125 0.169393"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/leg_bl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.111983 -0.19125 0.169393"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/leg_bl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_br_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.00010588985121896821 0.019028085856187954 0.0396331107804114"/>
+    <mass value="0.14550955662938475"/>
+    <inertia ixx="7.7e-05" ixy="-0.0" ixz="0.0" iyy="7.3e-05" iyz="-2.9e-05" izz="2.7e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.112418 -0.192806 0.170967"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/leg_br_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.112418 -0.192806 0.170967"/>
+    <geometry>
+      <mesh filename="package://simplicity_description/meshes/leg_br_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rigid1" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.014 -0.145 0.07"/>
+  <parent link="base_link"/>
+  <child link="flap_1"/>
+</joint>
+
+<joint name="Rigid2" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0175 -0.185 0.044195"/>
+  <parent link="base_link"/>
+  <child link="shoulder_link_ft_1"/>
+</joint>
+
+<joint name="Rigid3" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.0175 -0.185 -0.032226"/>
+  <parent link="base_link"/>
+  <child link="shoulder_link_fb_1"/>
+</joint>
+
+<joint name="Rigid4" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.0175 0.175 0.044195"/>
+  <parent link="base_link"/>
+  <child link="shoulder_link_bt_1"/>
+</joint>
+
+<joint name="Rigid5" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.0175 0.175 -0.032226"/>
+  <parent link="base_link"/>
+  <child link="shoulder_link_bb_1"/>
+</joint>
+
+<joint name="Rigid6" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0025 -0.015 0.013321"/>
+  <parent link="shoulder_link_fb_1"/>
+  <child link="servo_shoulder_fr_1"/>
+</joint>
+
+<joint name="Rigid7" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.0025 -0.015 -0.013321"/>
+  <parent link="shoulder_link_ft_1"/>
+  <child link="servo_shoulder_fl_1"/>
+</joint>
+
+<joint name="Rigid8" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.0075 0.015 -0.013321"/>
+  <parent link="shoulder_link_bt_1"/>
+  <child link="servo_shoulder_br_1"/>
+</joint>
+
+<joint name="Rigid9" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0325 0.015 -0.013302"/>
+  <parent link="shoulder_link_bt_1"/>
+  <child link="servo_shoulder_bl_1"/>
+</joint>
+
+<joint name="Rigid10" type="fixed">
+  <origin rpy="0 0 0" xyz="0.005 0.0269 -0.02489"/>
+  <parent link="servo_shoulder_fl_1"/>
+  <child link="servo_back_fl_1"/>
+</joint>
+
+<joint name="Rigid11" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.005 0.0269 0.02489"/>
+  <parent link="servo_shoulder_fr_1"/>
+  <child link="servo_back_fr_1"/>
+</joint>
+
+<joint name="Rigid12" type="fixed">
+  <origin rpy="0 0 0" xyz="0.005 -0.0269 -0.02489"/>
+  <parent link="servo_shoulder_br_1"/>
+  <child link="servo_back_br_1"/>
+</joint>
+
+<joint name="Rigid13" type="fixed">
+  <origin rpy="0 0 0" xyz="0.005 -0.0269 -0.02489"/>
+  <parent link="servo_shoulder_bl_1"/>
+  <child link="servo_back_bl_1"/>
+</joint>
+
+<joint name="Rev14" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.005 -0.0175 0.03519"/>
+  <parent link="servo_shoulder_fr_1"/>
+  <child link="shoulder_thigh_fr_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="Rev15" type="continuous">
+  <origin rpy="0 0 0" xyz="0.005 -0.0175 -0.01459"/>
+  <parent link="servo_shoulder_fl_1"/>
+  <child link="shoulder_thigh_fl_1"/>
+  <axis xyz="0.0 -1.0 -0.0"/>
+</joint>
+
+<joint name="Rev16" type="continuous">
+  <origin rpy="0 0 0" xyz="0.005 0.0175 -0.01459"/>
+  <parent link="servo_shoulder_bl_1"/>
+  <child link="shoulder_thigh_bl_1"/>
+  <axis xyz="-0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="Rev17" type="continuous">
+  <origin rpy="0 0 0" xyz="0.005 0.0175 -0.01459"/>
+  <parent link="servo_shoulder_br_1"/>
+  <child link="shoulder_thigh_br_1"/>
+  <axis xyz="-0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="Rev18" type="continuous">
+  <origin rpy="0 0 0" xyz="0.05975 0.02255 0.0"/>
+  <parent link="shoulder_thigh_fl_1"/>
+  <child link="servo_thigh_fl_1"/>
+  <axis xyz="-1.0 -0.0 0.0"/>
+</joint>
+
+<joint name="Rev19" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.05975 0.02255 0.0"/>
+  <parent link="shoulder_thigh_fr_1"/>
+  <child link="servo-thigh_fr_1"/>
+  <axis xyz="1.0 -0.0 0.0"/>
+</joint>
+
+<joint name="Rev20" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.05975 -0.02255 0.0"/>
+  <parent link="shoulder_thigh_br_1"/>
+  <child link="servo_thigh_br_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+</joint>
+
+<joint name="Rev21" type="continuous">
+  <origin rpy="0 0 0" xyz="0.05975 -0.02255 0.0"/>
+  <parent link="shoulder_thigh_bl_1"/>
+  <child link="servo_thigh_bl_1"/>
+  <axis xyz="-1.0 0.0 -0.0"/>
+</joint>
+
+<joint name="Rigid23" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0175 0.013852 -0.00678"/>
+  <parent link="servo_thigh_fl_1"/>
+  <child link="thigh_fl_1"/>
+</joint>
+
+<joint name="Rigid24" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.0175 0.006781 -0.013852"/>
+  <parent link="servo-thigh_fr_1"/>
+  <child link="thigh_fr_1"/>
+</joint>
+
+<joint name="Rigid25" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.0175 0.006781 -0.013852"/>
+  <parent link="servo_thigh_br_1"/>
+  <child link="thigh_br_1"/>
+</joint>
+
+<joint name="Rigid26" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0175 0.012296 -0.005225"/>
+  <parent link="servo_thigh_bl_1"/>
+  <child link="thigh_bl_1"/>
+</joint>
+
+<joint name="Rigid27" type="fixed">
+  <origin rpy="0 0 0" xyz="0.02 0.041897 -0.05604"/>
+  <parent link="thigh_fl_1"/>
+  <child link="servo_leg_fl_1"/>
+</joint>
+
+<joint name="Rigid28" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.02 0.048968 -0.048969"/>
+  <parent link="thigh_fr_1"/>
+  <child link="servo_leg_fr_1"/>
+</joint>
+
+<joint name="Rigid29" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.02 0.048968 -0.048968"/>
+  <parent link="thigh_br_1"/>
+  <child link="servo_leg_br_1"/>
+</joint>
+
+<joint name="Rigid30" type="fixed">
+  <origin rpy="0 0 0" xyz="0.02 0.041898 -0.05604"/>
+  <parent link="thigh_bl_1"/>
+  <child link="servo_leg_bl_1"/>
+</joint>
+
+<joint name="Rigid31" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0269 0.021135 -0.014064"/>
+  <parent link="servo_leg_fr_1"/>
+  <child link="servo_leg_back_fr_1"/>
+</joint>
+
+<joint name="Rigid32" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.0269 0.021135 -0.014064"/>
+  <parent link="servo_leg_fl_1"/>
+  <child link="servo_leg_back_fl_1"/>
+</joint>
+
+<joint name="Rigid33" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0269 0.021135 -0.014064"/>
+  <parent link="servo_leg_br_1"/>
+  <child link="servo_leg_back_br_1"/>
+</joint>
+
+<joint name="Rigid34" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.0269 0.021135 -0.014064"/>
+  <parent link="servo_leg_bl_1"/>
+  <child link="servo_leg_back_bl_1"/>
+</joint>
+
+<joint name="Rev35" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0175 0.013852 -0.006781"/>
+  <parent link="servo_leg_fl_1"/>
+  <child link="thigh_leg_fl_1"/>
+  <axis xyz="1.0 0.0 -0.0"/>
+</joint>
+
+<joint name="Rev36" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.0175 0.013852 -0.00678"/>
+  <parent link="servo_leg_fr_1"/>
+  <child link="thigh_leg_fr_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+</joint>
+
+<joint name="Rev37" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0175 0.013852 -0.00678"/>
+  <parent link="servo_leg_bl_1"/>
+  <child link="thigh_leg_bl_1"/>
+  <axis xyz="1.0 -0.0 0.0"/>
+</joint>
+
+<joint name="Rev38" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.0175 0.013852 -0.006781"/>
+  <parent link="servo_leg_br_1"/>
+  <child link="thigh_leg_br_1"/>
+  <axis xyz="-1.0 -0.0 -0.0"/>
+</joint>
+
+<joint name="Rigid39" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.012707 -0.028468 -0.049355"/>
+  <parent link="thigh_leg_fl_1"/>
+  <child link="contact_sensor_fl_1"/>
+</joint>
+
+<joint name="Rigid40" type="fixed">
+  <origin rpy="0 0 0" xyz="0.032393 -0.028468 -0.049356"/>
+  <parent link="thigh_leg_fr_1"/>
+  <child link="contact_sensor_fr_1"/>
+</joint>
+
+<joint name="Rigid41" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.012707 -0.028469 -0.049356"/>
+  <parent link="thigh_leg_bl_1"/>
+  <child link="contact_sensor_bl_1"/>
+</joint>
+
+<joint name="Rigid42" type="fixed">
+  <origin rpy="0 0 0" xyz="0.032393 -0.028468 -0.049355"/>
+  <parent link="thigh_leg_br_1"/>
+  <child link="contact_sensor_br_1"/>
+</joint>
+
+<joint name="Rigid43" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.010061 -0.033277 -0.068295"/>
+  <parent link="contact_sensor_fl_1"/>
+  <child link="leg_fl_1"/>
+</joint>
+
+<joint name="Rigid44" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.010061 -0.033277 -0.068295"/>
+  <parent link="contact_sensor_fr_1"/>
+  <child link="leg_fr_1"/>
+</joint>
+
+<joint name="Rigid45" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.01006 -0.033277 -0.068295"/>
+  <parent link="contact_sensor_bl_1"/>
+  <child link="leg_bl_1"/>
+</joint>
+
+<joint name="Rigid46" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.010061 -0.033277 -0.068295"/>
+  <parent link="contact_sensor_br_1"/>
+  <child link="leg_br_1"/>
+</joint>
+
+</robot>
