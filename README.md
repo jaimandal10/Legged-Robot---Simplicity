@@ -6,7 +6,7 @@ Simplicity is a four legged robot made with ROS.
   - See HTML in the right
   - Magic  
   
-<img src="/iamges/SimplicityFullRendered.png" alt="home" width="400"/>
+<img src="/iamges/SimplicityFullRendered.png" alt="render" width="400"/>
 
 # Hard coded walking gait
 
