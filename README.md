@@ -4,7 +4,9 @@ Simplicity is a four legged robot made with ROS.
 
   - 12 joints
   - See HTML in the right
-  - Magic
+  - Magic  
+  
+<img src="/iamges/SimplicityFullRendered.png" alt="home" width="400"/>
 
 # Hard coded walking gait
 
